@@ -1,0 +1,75 @@
+:root {
+  --nav-footer-size: 1rem;
+  --title-size: 2rem;
+  --cards-size: 0.875rem;
+}
+
+@font-face {
+  font-family: "MonBold";
+  src: url("Assets/fonts/Montserrat-Bold.ttf") format("woff2"),
+    url("Assets/fonts/Montserrat-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonRegular";
+  src: url("Assets/fonts/Montserrat-Regular.ttf") format("woff2"),
+    url("Assets/fonts/Montserrat-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid black;
+  margin: 1%;
+  background-color: #ffff;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.desplegable {
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.container-menu {
+  display: flex;
+  font-family: "MonRegular";
+  gap: 50px;
+  font-size: var(--nav-footer-size);
+}
+
+.container-icons {
+  height: 30px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1%;
+}
+
+h1 {
+  display: flex;
+  font-family: "MonBold";
+  font-size: var(--title-size);
+  margin-left: 3.5%;
+  margin-top: 3%;
+}
+
+.container-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: aqua;
+  margin: 3.5%;
+  gap: 12%;
+}
+
+img {
+}
