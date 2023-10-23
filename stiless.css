@@ -4,6 +4,19 @@
   --cards-size: 0.875rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  padding: 10px;
+}
+
 @font-face {
   font-family: "MonBold";
   src: url("Assets/fonts/Montserrat-Bold.ttf") format("woff2"),
@@ -27,6 +40,8 @@
   border-bottom: 2px solid black;
   margin: 1%;
   background-color: #ffff;
+  position: sticky;
+  top: 0;
 }
 
 .navbar a {
@@ -59,17 +74,139 @@ h1 {
   font-family: "MonBold";
   font-size: var(--title-size);
   margin-left: 3.5%;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
-.container-img {
+.container-main {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  background-color: aqua;
-  margin: 3.5%;
-  gap: 12%;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 4%;
 }
 
-img {
+.img-items {
+  border-radius: 3.6%;
+}
+
+.container-text {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "MonRegular";
+  font-size: var(--cards-size);
+}
+
+.container-text .bold {
+  font-family: "MonBold";
+}
+
+.espacio-vacio {
+  padding: 20%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 2fr 0.3fr 1fr 0.3fr 1fr;
+  grid-template-rows: 1fr;
+  height: 6rem;
+  background-color: #212429;
+  padding: 1.5rem;
+}
+
+.options-footer {
+  background-color: #ffff;
+  border-radius: 50%;
+  width: 3rem;
+}
+
+.options-footer img {
+  margin: auto;
+  padding: 10px;
+}
+
+.options-ancors {
+  display: table;
+}
+
+.options-ancors a {
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #ffff;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4%;
+    margin: 0px 20px;
+  }
+
+  .desplegable {
+    display: inline-block;
+    position: sticky;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+
+  .container-menu {
+    display: none;
+  }
+
+  .container-icons {
+    display: none;
+  }
+
+  .navbar {
+    border-bottom: none;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #footer {
+    background-color: #212429;
+    width: 100%;
+  }
+
+  .footerFloat li {
+    display: inline-block;
+    width: 90%;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #ffff;
+  }
+
+  .footerFloat img {
+    border-radius: 50%;
+    background-color: #ffff;
+    width: 3rem;
+    padding: 10px;
+  }
+
+  .footerFloat a {
+    text-decoration: none;
+    color: #ffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .footerFloat {
+    display: none;
+  }
 }
